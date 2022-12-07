@@ -1,4 +1,5 @@
 import './App.css';
+{/*import Button from 'react-bootstrap/Button'; pour importer depuis le framework*/}
 import Pokedex from "./Pages/pokedex";
 import ListingPokemon from "./Pages/listingPokemon";
 import ManagePokemon from "./Pages/managePokemon";
@@ -15,7 +16,6 @@ function App(props) {
   <Router>
     <nav>
       <ul>
-          <li><Link to="/">Acceuil Projet Pokemon</Link></li>
           <li><Link to="/ListingPokemon">ListingPokemon</Link></li>
           <li><Link to="./Pages/ManagePokemon">ManagePokemon</Link></li>
           <li><Link to="./Pages/Pokedex">Pokedex</Link></li>
