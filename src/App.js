@@ -1,9 +1,8 @@
 import './App.css';
-{/*import Button from 'react-bootstrap/Button'; pour importer depuis le framework*/}
+import Button from 'react-bootstrap/Button';
 import Pokedex from "./Pages/pokedex";
 import ListingPokemon from "./Pages/listingPokemon";
 import ManagePokemon from "./Pages/managePokemon";
-import Home from "./Pages/home";
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,16 +15,13 @@ function App(props) {
   <Router>
     <nav>
       <ul>
-          <li><Link to="/ListingPokemon">ListingPokemon</Link></li>
-          <li><Link to="./Pages/ManagePokemon">ManagePokemon</Link></li>
-          <li><Link to="./Pages/Pokedex">Pokedex</Link></li>
+          <li><Link to="/">ListingPokemon</Link></li>
+          <li><Link to="/ManagePokemon">ManagePokemon</Link></li>
+          <li><Link to="/Pokedex">Pokedex</Link></li>
       </ul>
     </nav>
     <Switch>
-      <Route exact path="/"> {/*ici on met l'URL dans le navigateur*/}
-        <Home /> {/*ici on donne la page à afficher en fonction de cette URL*/}
-      </Route>
-      <Route path="/ListingPokemon">
+      <Route exact path="/">
         <ListingPokemon />
       </Route>
       <Route path="/ManagePokemon">
